@@ -1,0 +1,76 @@
+------------------------------------------------------------------------
+Cmput 275 Project:
+Link Picture Pairs
+
+Student Name: Liyao Jiang
+Student ID: 1512445
+Section: EB1
+Student Name: Xiaolei Zhang
+Student ID: 1515335
+Section: B1
+------------------------------------------------------------------------
+List of files:
+
+main.py
+ the game class handles the game itself
+ and puts everything together
+
+pict.py contains a class "Pict"
+ In the main game, each small picture block will be an instance of Pict
+ this class also have methods for checking different types of links.
+ Eg. zero_turn, one_turn, two_turn
+ Note: inside these methods, they will also draw a black line to show the links on the display when they are linkable.
+
+sidepan.py
+ contains a class 'Sidepan'
+ which is simply a side pannel for displaying
+ time remaining, score, and # of remaining picts
+ Also some instructions of game will be displayed
+
+remove.wav
+ the remove sound effect file
+ (found on the Internet)
+ (for Academic purpose only)
+
+images (folder):
+ 0.jpg ~ 9.jpg (ten different fruit pictures)
+ menu.jpg (the menu background)
+ (found on the Internet)
+ (for Academic purpose only)
+------------------------------------------------------------------------
+Running instruction:
+
+Pygame is used in this Project.
+It is already installed in the VM provided.
+
+You will need a mouse and a keyboard to play this game.
+
+Extract all the files.(keep directory structure!!!)
+Open the terminal and go the directory.
+Run using "python3 main.py".
+------------------------------------------------------------------------
+Game description:
+
+The game will have a 10x10 grid filled with random pictures.
+Each picture always appears even times (come in pairs).
+The goal is two find out two identical pictures.
+And try to connect them using a line turns at most two times.
+
+Win Condition: Remove all pictures from the grid
+Lose Condition: Time runs out
+------------------------------------------------------------------------
+Game control and special game features:
+
+1, At the menu stage, press key "q" to quit the game, and press key "r" to start a new game.
+
+2, Click on the first block you want to match, then click on the second block you want to match, the game will detect how the two blocks could be linked or not. And it will display the link lines with black lines. 
+
+3, The linked pics will be removed. The system will reward you with points based on your linking type. The game will also play a sound effect when linking.
+
+4, Game will reward you with more marks for High difficulty links (two turns, one turn) zero turn-10pts, one turn-20pts, three-turn-30pts.
+
+5, You can press key "a" to spend your points to add bonus time. 300 pts -> 10 s
+
+6, You can shuffle the existing picture by pressing "s" key. 			200 pts -> 1 shuffle
+
+7, On the right side of the display, you can see your remaining time and picture numbers. Also the score and helping information will also be displayed.
